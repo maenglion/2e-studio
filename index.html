@@ -3,97 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2e-studio | 엄마와 아들이 만드는 세상</title>
-    <!-- Tailwind CSS 로드 -->
+    <title>2e-studio | 특별한 아이가 만드는 세상</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts (Noto Sans KR) 로드 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        /* Noto Sans KR 폰트 기본 적용 */
+        /* Noto Sans KR 폰트 적용 */
         body {
             font-family: 'Noto Sans KR', sans-serif;
         }
-        /* 커스텀 스타일 */
-        .gallery-item:hover .overlay {
-            opacity: 1;
+        /* 슬라이더 애니메이션 */
+        .slide {
+            display: none;
+            transition: opacity 1s ease-in-out;
         }
-        .gallery-item .overlay {
-            transition: opacity 0.3s ease-in-out;
+        .slide.active {
+            display: block;
+        }
+        /* 유튜브 반응형 */
+        .youtube-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+        }
+        .youtube-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- 헤더 및 내비게이션 -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
+    <!-- 헤더 -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-black text-blue-600">
-                <a href="#">2e-studio</a>
+            <a href="#" class="text-2xl font-bold text-blue-600">2e-studio</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-600 hover:text-blue-500">About 2e-studio</a>
+                <a href="#projects" class="text-gray-600 hover:text-blue-500">Projects</a>
+                <a href="#hudadak" class="text-gray-600 hover:text-blue-500">후다닥 미세먼지</a>
             </div>
-            <div class="space-x-6 text-lg font-bold">
-                <a href="https://drive.google.com/drive/folders/1b1hzQrRJxZm05AlIrXU6UyDuzwg3wKt8?usp=drive_link" target="_blank" class="text-gray-600 hover:text-blue-600 transition">hudadak</a>
-                <a href="https://drive.google.com/drive/folders/1KO1ZJR5RZzusVCkUQBuTPd196Fol0pkP?usp=drive_link" target="_blank" class="text-gray-600 hover:text-blue-600 transition">making story</a>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
             </div>
         </nav>
+        <!-- 모바일 메뉴 -->
+        <div id="mobile-menu" class="md:hidden hidden px-6 pb-4">
+            <a href="#about" class="block py-2 text-gray-600 hover:text-blue-500">About 2e-studio</a>
+            <a href="#projects" class="block py-2 text-gray-600 hover:text-blue-500">Projects</a>
+            <a href="#hudadak" class="block py-2 text-gray-600 hover:text-blue-500">후다닥 미세먼지</a>
+        </div>
     </header>
 
-    <main class="container mx-auto px-6 py-12 md:py-20">
-
-        <!-- 메인 소개 섹션 -->
-        <section class="text-center mb-16 md:mb-24">
-            <h1 class="text-4xl md:text-6xl font-black text-gray-900 leading-tight mb-4">엄마와 아들이 만드는<br>조금 특별한 세상</h1>
-            <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-                2e-studio는 9살 기획자 민후와, 그런 아들의 멋진 취미를 돕는 엄마가 함께 만들어가는 공간입니다. 저희는 둘 다 아스퍼거 증후군을 가지고 있어 세상을 조금 다르게 보지만, 그 시선으로 발견한 아이디어를 기술로 구현하며 세상과 소통합니다.
-            </p>
+    <main>
+        <!-- 메인 섹션 (Hero) -->
+        <section class="relative w-full h-[300px] md:h-[500px] overflow-hidden">
+            <!-- 슬라이드 이미지들 (권장 사이즈: 1200x500) -->
+            <div id="slider">
+                <img src="https://res.cloudinary.com/dnswboo5z/image/upload/v1755055345/main-image2_tdlwp7.png" alt="슬라이드 이미지 1" class="slide active w-full h-full object-cover">
+                <img src="https://res.cloudinary.com/dnswboo5z/image/upload/v1755055345/2e-studio-main3_dhh2yr.png" alt="슬라이드 이미지 2" class="slide w-full h-full object-cover">
+                <img src="https://res.cloudinary.com/dnswboo5z/image/upload/v1755055344/2e-studio-main_my2oek.png" alt="슬라이드 이미지 3" class="slide w-full h-full object-cover">
+            </div>
+            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                <div class="text-center text-white p-4">
+                    <h1 class="text-4xl md:text-6xl font-extrabold drop-shadow-lg">9세 아이가 만드는 조금 특별한 세상</h1>
+                    <p class="mt-4 text-lg md:text-xl font-medium">아스퍼거 증후군을 가진 모자(母子)의 특별한 시선으로 세상을 이롭게 합니다.</p>
+                </div>
+            </div>
         </section>
 
-        <!-- 제작 스토리 (앨범 UI) -->
-        <section>
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">첫 번째 프로젝트: 후다닥 미세먼지 피하기</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- 앨범 아이템 1 -->
-                <div class="gallery-item bg-white rounded-lg shadow-lg overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://placehold.co/600x400/e2e8f0/334155?text=Minhoo's+Idea" alt="민후의 아이디어 스케치" class="w-full h-64 object-cover">
-                        <div class="overlay absolute inset-0 bg-black bg-opacity-50 opacity-0 flex items-center justify-center">
-                            <p class="text-white text-lg font-bold text-center p-4">"엄마, 내가 보기 편한<br>미세먼지 앱 만들래!"</p>
-                        </div>
+        <!-- About 2e-studio -->
+        <section id="about" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">About 2e-studio</h2>
+                    <p class="text-lg text-gray-600 mb-8">
+                        '2e-studio'는 <strong>두 명의 전문가(2-expert)</strong>, 그리고 <strong>두 번의 특별함(twice-exceptional)</strong>을 의미합니다. 9살 기획자 민후와 개발자 엄마가 만나 세상을 바라보는 독특한 시선을 기술로 구현합니다. 저희는 평범하지 않기에 발견할 수 있는 문제들을 해결하고, 그 과정을 통해 세상에 새로운 가치를 더하고자 합니다.
+                    </p>
+                </div>
+                <div class="mt-12 md:flex items-center gap-8">
+                    <!-- 민후 사진 (기사 페이지 스타일, 권장 사이즈: 400x400) -->
+                    <div class="md:w-1/3 mb-8 md:mb-0">
+                        <img src="https://res.cloudinary.com/dnswboo5z/image/upload/v1755055551/minhoo-profile_kzsumc.png" alt="기획자 민후" class="rounded-lg shadow-xl mx-auto">
                     </div>
-                    <div class="p-5">
-                        <h3 class="text-xl font-bold mb-2">시작은 작은 결심</h3>
-                        <p class="text-gray-600">어느 날, 즐겨 쓰던 앱에서 미세먼지 정보가 사라진 것을 발견한 민후. 업체에 직접 연락했지만 돌아온 답변에, 직접 문제를 해결하기로 결심합니다.</p>
+                    <div class="md:w-2/3">
+                        <h3 class="text-2xl font-bold mb-4">꼬꼬마 기획자, 민후를 소개합니다</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            민후는 세상을 자신만의 방식으로 탐색하는 아이입니다. 네 살 때부터 모든 내비게이션 경로를 외우고, 지도를 보며 길을 찾는 데 특별한 재능을 보였습니다. 우주의 원리에 대해 이해하고, 처음 보는 API 문서에서 원하는 기능을 찾아내는 능력은 어른들을 놀라게 합니다. '후다닥 미세먼지' 앱은 이런 민후의 재능과 불편함을 해결하려는 순수한 마음에서 시작된 첫 번째 프로젝트입니다.
+                        </p>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <!-- 앨범 아이템 2 -->
-                <div class="gallery-item bg-white rounded-lg shadow-lg overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://placehold.co/600x400/93c5fd/1e3a8a?text=GPS+Master" alt="GPS 지도 이미지" class="w-full h-64 object-cover">
-                        <div class="overlay absolute inset-0 bg-black bg-opacity-50 opacity-0 flex items-center justify-center">
-                            <p class="text-white text-lg font-bold text-center p-4">4살부터 모든 내비게이션을<br>섭렵한 GPS 전문가</p>
+        <!-- 프로젝트 소개 -->
+        <section id="projects" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Projects</h2>
+                <div class="grid md:grid-cols-2 gap-10">
+                    <!-- 프로젝트 1: 후다닥 미세먼지 피하기 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <!-- 썸네일 이미지 (권장 사이즈: 600x400) -->
+                        <img src="https://res.cloudinary.com/dnswboo5z/image/upload/v1755053655/hudadak-air-thumbnail_h5ohtq.png" alt="후다닥 미세먼지 피하기" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2">후다닥 미세먼지 피하기</h3>
+                            <p class="text-gray-600 mb-4">가장 가까운 관측소의 정확한 데이터를, 아이의 눈높이에 맞춘 직관적인 UI로 보여주는 미세먼지 정보 앱입니다.</p>
+                            <a href="#hudadak" class="text-blue-600 font-semibold hover:underline">자세히 보기 &rarr;</a>
                         </div>
                     </div>
-                    <div class="p-5">
-                        <h3 class="text-xl font-bold mb-2">놀라운 감각</h3>
-                        <p class="text-gray-600">소년의 특별한 재능은 API를 직접 찾아내고, 가장 직관적인 UI를 구상하는 데 큰 힘이 되었습니다. 이 앱의 핵심 기획은 모두 민후의 머릿속에서 나왔답니다.</p>
+                    <!-- 프로젝트 2: Shrimp Predictor -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <!-- 썸네일 이미지 (권장 사이즈: 600x400) -->
+                        <img src="https://res.cloudinary.com/dnswboo5z/image/upload/v1755055867/shrimp_predictor_pjmduy.png" alt="Shrimp Predictor" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2">Shrimp Predictor</h3>
+                            <p class="text-gray-600 mb-4">새우를 사랑하는 민후가 직접 기획한 관상용 새우 색상 유전 예상 프로그램. 부모 새우의 정보를 입력하면 2세의 색상을 예측해줍니다.</p>
+                            <a href="https://shrimp-predictor.netlify.app/" class="text-gray-400 font-semibold cursor-not-allowed">준비 중입니다...</a>
+                        </div>
                     </div>
                 </div>
-
-                <!-- 앨범 아이템 3 (유튜브 링크) -->
-                <div class="gallery-item bg-white rounded-lg shadow-lg overflow-hidden group">
-                    <div class="relative">
-                        <img src="https://placehold.co/600x400/f87171/7f1d1d?text=Making+Film" alt="유튜브 영상 썸네일" class="w-full h-64 object-cover">
-                        <a href="https://www.youtube.com/shorts/G8yIXZVppMo" target="_blank" class="overlay absolute inset-0 bg-black bg-opacity-70 opacity-0 flex flex-col items-center justify-center text-white text-lg font-bold text-center p-4">
-                            <svg class="w-16 h-16 mb-2" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M27.4297 3.1211C27.123 1.89844 26.1035 0.917969 24.8477 0.621094C22.6797 0 14 0 14 0C14 0 5.32031 0 3.15234 0.621094C1.89648 0.917969 0.876953 1.89844 0.570312 3.12109C0 5.33594 0 10 0 10C0 10 0 14.6641 0.570312 16.8789C0.876953 18.1016 1.89648 19.082 3.15234 19.3789C5.32031 20 14 20 14 20C14 20 22.6797 20 24.8477 19.3789C26.1035 19.082 27.123 18.1016 27.4297 16.8789C28 14.6641 28 10 28 10C28 10 28 5.33594 27.4297 3.1211Z" fill="#FF0000"/><path d="M11.2 14.2857V5.71429L18.4 10L11.2 14.2857Z" fill="white"/></svg>
-                            <p>민후의 유튜브 채널<br>@soulspectrum17</p>
-                        </a>
+            </div>
+        </section>
+        
+        <!-- 후다닥 미세먼지 피하기 상세 -->
+        <section id="hudadak" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">민후의 첫 번째 프로젝트</h2>
+                <p class="text-xl text-center text-gray-600 mb-12">"후다닥 미세먼지 피하기"</p>
+                
+                <div class="flex flex-col lg:flex-row items-center justify-center gap-12">
+                    <!-- 앱 이미지 (1080x1920 비율 유지) -->
+                    <div class="w-full max-w-[280px] md:max-w-[320px] flex-shrink-0">
+                         <div class="aspect-[9/16] bg-gray-200 rounded-3xl p-4 shadow-2xl">
+                             <!-- 실제 앱 스크린샷 이미지 (권장 사이즈: 1080x1920) -->
+                             <img src="https://res.cloudinary.com/dnswboo5z/image/upload/v1755052753/hudadak-3min2_pfa0og.png" alt="후다닥 미세먼지 앱 스크린샷" class="w-full h-full object-cover rounded-xl">
+                         </div>
                     </div>
-                    <div class="p-5">
-                        <h3 class="text-xl font-bold mb-2">민후의 목소리</h3>
-                        <p class="text-gray-600">민후가 직접 설명하는 앱 개발의 뒷이야기가 궁금하다면, 유튜브 채널을 방문해 주세요. 소년의 열정과 재능을 직접 확인하실 수 있습니다.</p>
+                    
+                    <!-- 앨범 UI -->
+                    <div class="w-full">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <!-- 아이디어의 시작 -->
+                            <div class="relative rounded-lg overflow-hidden shadow-lg h-64">
+                                <!-- 민후 스케치 이미지 (권장 사이즈: 400x300) -->
+                                <img src="https://res.cloudinary.com/dnswboo5z/image/upload/v1755053961/idea-minhoo_od0jxw.png" alt="민후의 아이디어 스케치" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-between p-4 text-white">
+                                    <p class="font-bold text-lg">"엄마, 내가 보기 편한 앱 만들래!"</p>
+                                    <p class="text-sm">기존 앱들의 복잡한 정보와 부정확한 위치 기반 데이터에 불편함을 느낀 민후가 직접 앱 개발을 결심했습니다.</p>
+                                </div>
+                            </div>
+                            <!-- 민후의 재능 -->
+                            <div class="relative rounded-lg overflow-hidden shadow-lg h-64">
+                                <!-- GPS 지도 이미지 (권장 사이즈: 400x300) -->
+                                <img src="https://res.cloudinary.com/dnswboo5z/image/upload/v1755054245/MINHOO_UNIVERS_r7zzjt.png" alt="GPS 지도" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-between p-4 text-white">
+                                    <p class="font-bold text-lg">"4살부터 모든 내비게이션을 섭렵한 GPS 전문가"</p>
+                                    <p class="text-sm">민후는 직접 공공데이터포털에서 가장 정확한 관측소 API를 찾아내고, 사용자에게 꼭 필요한 정보만 보여주는 UI를 구상한 핵심 기획자입니다.</p>
+                                </div>
+                            </div>
+                            <!-- 유튜브 영상 -->
+                             <div class="rounded-lg overflow-hidden shadow-lg h-64 bg-black">
+                                <div class="youtube-container">
+                                    <!-- 공유하고 싶은 유튜브 영상의 '퍼가기' 코드를 아래에 붙여넣으세요 -->
+                                    <iframe src="https://youtube.com/shorts/G8yIXZVppMo?si=nZKu0c0326AbFVR4" title="공공데이터 포털?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -102,16 +184,54 @@
     </main>
 
     <!-- 푸터 -->
-    <footer class="bg-white border-t border-gray-200 mt-12">
-        <div class="container mx-auto px-6 py-8 text-center text-gray-500">
-            <h3 class="text-lg font-bold text-gray-700 mb-2">2e-studio</h3>
-            <p>엄마와 아들이 함께 세상을 탐험하고, 기술로 아이디어를 구현하는 작은 스튜디오입니다.</p>
-            <p class="mt-4">
-                <strong>Contact:</strong> <a href="mailto:maengnanyoung@gmail.com" class="hover:text-blue-600">maengnanyoung@gmail.com</a>
-            </p>
-            <p class="text-sm mt-6">&copy; 2025 2e-studio. All Rights Reserved.</p>
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+                <div>
+                    <h3 class="text-xl font-bold">2e-studio</h3>
+                    <p class="text-gray-400 mt-2">Developer: 맹난영</p>
+                    <p class="text-gray-400">Email: <a href="mailto:maengnanyoung@gmail.com" class="hover:underline">maengnanyoung@gmail.com</a></p>
+                </div>
+                <div class="mt-6 md:mt-0">
+                    <p class="text-gray-400">&copy; 2025 2e-studio. All Rights Reserved.</p>
+                    <a href="privacy.html" class="text-gray-400 hover:underline mt-2 inline-block">개인정보처리방침</a>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <script>
+        // 모바일 메뉴 토글
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 이미지 슬라이더
+        const slider = document.getElementById('slider');
+        const slides = slider.getElementsByClassName('slide');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove('active');
+                slides[i].style.opacity = '0';
+            }
+            slides[index].classList.add('active');
+            slides[index].style.opacity = '1';
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        // 3초마다 슬라이드 변경
+        setInterval(nextSlide, 3000);
+
+        // 초기 슬라이드 표시
+        showSlide(currentSlide);
+    </script>
 </body>
 </html>
