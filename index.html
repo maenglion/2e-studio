@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2e-studio | 엄마와 아들이 만드는 세상</title>
+    <!-- Tailwind CSS 로드 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts (Noto Sans KR) 로드 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* Noto Sans KR 폰트 기본 적용 */
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        /* 커스텀 스타일 */
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+        .gallery-item .overlay {
+            transition: opacity 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- 헤더 및 내비게이션 -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-black text-blue-600">
+                <a href="#">2e-studio</a>
+            </div>
+            <div class="space-x-6 text-lg font-bold">
+                <a href="https://drive.google.com/drive/folders/1b1hzQrRJxZm05AlIrXU6UyDuzwg3wKt8?usp=drive_link" target="_blank" class="text-gray-600 hover:text-blue-600 transition">hudadak</a>
+                <a href="https://drive.google.com/drive/folders/1KO1ZJR5RZzusVCkUQBuTPd196Fol0pkP?usp=drive_link" target="_blank" class="text-gray-600 hover:text-blue-600 transition">making story</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 md:py-20">
+
+        <!-- 메인 소개 섹션 -->
+        <section class="text-center mb-16 md:mb-24">
+            <h1 class="text-4xl md:text-6xl font-black text-gray-900 leading-tight mb-4">엄마와 아들이 만드는<br>조금 특별한 세상</h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+                2e-studio는 9살 기획자 민후와, 그런 아들의 멋진 취미를 돕는 엄마가 함께 만들어가는 공간입니다. 저희는 둘 다 아스퍼거 증후군을 가지고 있어 세상을 조금 다르게 보지만, 그 시선으로 발견한 아이디어를 기술로 구현하며 세상과 소통합니다.
+            </p>
+        </section>
+
+        <!-- 제작 스토리 (앨범 UI) -->
+        <section>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">첫 번째 프로젝트: 후다닥 미세먼지 피하기</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 앨범 아이템 1 -->
+                <div class="gallery-item bg-white rounded-lg shadow-lg overflow-hidden group">
+                    <div class="relative">
+                        <img src="https://placehold.co/600x400/e2e8f0/334155?text=Minhoo's+Idea" alt="민후의 아이디어 스케치" class="w-full h-64 object-cover">
+                        <div class="overlay absolute inset-0 bg-black bg-opacity-50 opacity-0 flex items-center justify-center">
+                            <p class="text-white text-lg font-bold text-center p-4">"엄마, 내가 보기 편한<br>미세먼지 앱 만들래!"</p>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold mb-2">시작은 작은 결심</h3>
+                        <p class="text-gray-600">어느 날, 즐겨 쓰던 앱에서 미세먼지 정보가 사라진 것을 발견한 민후. 업체에 직접 연락했지만 돌아온 답변에, 직접 문제를 해결하기로 결심합니다.</p>
+                    </div>
+                </div>
+
+                <!-- 앨범 아이템 2 -->
+                <div class="gallery-item bg-white rounded-lg shadow-lg overflow-hidden group">
+                    <div class="relative">
+                        <img src="https://placehold.co/600x400/93c5fd/1e3a8a?text=GPS+Master" alt="GPS 지도 이미지" class="w-full h-64 object-cover">
+                        <div class="overlay absolute inset-0 bg-black bg-opacity-50 opacity-0 flex items-center justify-center">
+                            <p class="text-white text-lg font-bold text-center p-4">4살부터 모든 내비게이션을<br>섭렵한 GPS 전문가</p>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold mb-2">놀라운 감각</h3>
+                        <p class="text-gray-600">소년의 특별한 재능은 API를 직접 찾아내고, 가장 직관적인 UI를 구상하는 데 큰 힘이 되었습니다. 이 앱의 핵심 기획은 모두 민후의 머릿속에서 나왔답니다.</p>
+                    </div>
+                </div>
+
+                <!-- 앨범 아이템 3 (유튜브 링크) -->
+                <div class="gallery-item bg-white rounded-lg shadow-lg overflow-hidden group">
+                    <div class="relative">
+                        <img src="https://placehold.co/600x400/f87171/7f1d1d?text=Making+Film" alt="유튜브 영상 썸네일" class="w-full h-64 object-cover">
+                        <a href="https://www.youtube.com/shorts/G8yIXZVppMo" target="_blank" class="overlay absolute inset-0 bg-black bg-opacity-70 opacity-0 flex flex-col items-center justify-center text-white text-lg font-bold text-center p-4">
+                            <svg class="w-16 h-16 mb-2" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M27.4297 3.1211C27.123 1.89844 26.1035 0.917969 24.8477 0.621094C22.6797 0 14 0 14 0C14 0 5.32031 0 3.15234 0.621094C1.89648 0.917969 0.876953 1.89844 0.570312 3.12109C0 5.33594 0 10 0 10C0 10 0 14.6641 0.570312 16.8789C0.876953 18.1016 1.89648 19.082 3.15234 19.3789C5.32031 20 14 20 14 20C14 20 22.6797 20 24.8477 19.3789C26.1035 19.082 27.123 18.1016 27.4297 16.8789C28 14.6641 28 10 28 10C28 10 28 5.33594 27.4297 3.1211Z" fill="#FF0000"/><path d="M11.2 14.2857V5.71429L18.4 10L11.2 14.2857Z" fill="white"/></svg>
+                            <p>민후의 유튜브 채널<br>@soulspectrum17</p>
+                        </a>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold mb-2">민후의 목소리</h3>
+                        <p class="text-gray-600">민후가 직접 설명하는 앱 개발의 뒷이야기가 궁금하다면, 유튜브 채널을 방문해 주세요. 소년의 열정과 재능을 직접 확인하실 수 있습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="bg-white border-t border-gray-200 mt-12">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-500">
+            <h3 class="text-lg font-bold text-gray-700 mb-2">2e-studio</h3>
+            <p>엄마와 아들이 함께 세상을 탐험하고, 기술로 아이디어를 구현하는 작은 스튜디오입니다.</p>
+            <p class="mt-4">
+                <strong>Contact:</strong> <a href="mailto:maengnanyoung@gmail.com" class="hover:text-blue-600">maengnanyoung@gmail.com</a>
+            </p>
+            <p class="text-sm mt-6">&copy; 2025 2e-studio. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
