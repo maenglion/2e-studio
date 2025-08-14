@@ -46,7 +46,7 @@
             <div class="hidden md:flex space-x-8">
                 <a href="#about" class="text-gray-600 hover:text-blue-500">About 2e-studio</a>
                 <a href="#projects" class="text-gray-600 hover:text-blue-500">Projects</a>
-                <a href="#hudadak" class="text-gray-600 hover:text-blue-500">후다닥 미세먼지</a>
+                <a href="hudadak.html" class="text-gray-600 hover:text-blue-500">후다닥 미세먼지</a>
             </div>
             <div class="md:hidden">
                 <button id="menu-btn" class="text-gray-600 focus:outline-none">
@@ -58,7 +58,7 @@
         <div id="mobile-menu" class="md:hidden hidden px-6 pb-4">
             <a href="#about" class="block py-2 text-gray-600 hover:text-blue-500">About 2e-studio</a>
             <a href="#projects" class="block py-2 text-gray-600 hover:text-blue-500">Projects</a>
-            <a href="#hudadak" class="block py-2 text-gray-600 hover:text-blue-500">후다닥 미세먼지</a>
+            <a href="hudadak.html" class="block py-2 text-gray-600 hover:text-blue-500">후다닥 미세먼지</a>
         </div>
     </header>
 
@@ -109,7 +109,7 @@
                         <div class="p-6">
                             <h3 class="text-2xl font-bold mb-2">후다닥 미세먼지 피하기</h3>
                             <p class="text-gray-600 mb-4">가장 가까운 관측소의 정확한 데이터를, 아이의 눈높이에 맞춘 직관적인 UI로 보여주는 미세먼지 정보 앱입니다.</p>
-                            <a href="#hudadak" class="text-blue-600 font-semibold hover:underline">자세히 보기 &rarr;</a>
+                            <a href="hudadak.html" class="text-blue-600 font-semibold hover:underline">자세히 보기 &rarr;</a>
                         </div>
                     </div>
                     <!-- 프로젝트 2: Shrimp Predictor -->
@@ -129,8 +129,8 @@
         <!-- 후다닥 미세먼지 피하기 상세 -->
         <section id="hudadak" class="py-16 md:py-24 bg-white">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">민후의 첫 번째 프로젝트</h2>
-                <p class="text-xl text-center text-gray-600 mb-12">"후다닥 미세먼지 피하기"</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">민후의 첫 번째 프로젝트: 후다닥 미세먼지</h2>
+                <p class="text-xl text-center text-gray-600 mb-12">개발 스토리 하이라이트</p>
                 
                 <!-- 테스터 모집 섹션 -->
                 <div class="max-w-4xl mx-auto mb-16 bg-blue-50 border-l-4 border-blue-500 text-blue-800 p-6 rounded-r-lg shadow-md">
@@ -138,48 +138,45 @@
                     <p class="mb-4 leading-relaxed">
                         9살 기획자 민후의 첫 프로젝트, '후다닥 미세먼지 피하기' 앱의 정식 출시를 함께 해주실 소중한 테스터 분들을 찾습니다. 구글 플레이의 새로운 정책에 따라 정식 출시 전 최소 12명의 테스터와 함께 2주간의 테스트를 진행해야 합니다. 안정적인 테스트 진행을 위해 20명의 테스터를 모집할 예정이오니, 많은 관심과 참여 부탁드립니다!
                     </p>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeWY_zFqgoXMeZtRmnRzua6vsaNEyNGVzme1IqtUF7fJCB0HA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="inline-block bg-blue-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfx22t4rC-R0l_jN4b-Y2m-wB6jF-sC-A4StF7FziBlXw/viewform" target="_blank" rel="noopener noreferrer" class="inline-block bg-blue-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300">
                         테스터 신청하기 (구글 폼) &rarr;
                     </a>
                 </div>
                 
-                <div class="flex flex-col lg:flex-row items-center justify-center gap-12">
-                    <!-- 앱 이미지 (1080x1920 비율 유지) -->
-                    <div class="w-full max-w-[280px] md:max-w-[320px] flex-shrink-0">
-                         <div class="aspect-[9/16] bg-gray-200 rounded-3xl p-4 shadow-2xl">
-                             <!-- 실제 앱 스크린샷 이미지 (권장 사이즈: 1080x1920) -->
-                             <img src="https://res.cloudinary.com/dnswboo5z/image/upload/v1755052753/hudadak-3min2_pfa0og.png" alt="후다닥 미세먼지 앱 스크린샷" class="w-full h-full object-cover rounded-xl">
-                         </div>
+                <!-- 뉴스 카드형 UI -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- 카드 1: 대표 이미지 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                        <img src="https://res.cloudinary.com/dnswboo5z/image/upload/v1755053655/hudadak-air-thumbnail_h5ohtq.png" alt="후다닥 미세먼지 대표 이미지" class="w-full h-48 object-cover">
+                        <div class="p-4 flex-grow">
+                            <h4 class="font-bold text-lg mb-2">민후의 첫 작품</h4>
+                            <p class="text-sm text-gray-600">불편함을 해결하고 싶다는 순수한 마음에서 출발한 '후다닥 미세먼지' 앱의 메인 화면입니다.</p>
+                        </div>
                     </div>
-                    
-                    <!-- 앨범 UI -->
-                    <div class="w-full">
-                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            <!-- 아이디어의 시작 -->
-                            <div class="relative rounded-lg overflow-hidden shadow-lg h-64">
-                                <!-- 민후 스케치 이미지 (권장 사이즈: 400x300) -->
-                                <img src="https://res.cloudinary.com/dnswboo5z/image/upload/v1755053961/idea-minhoo_od0jxw.png" alt="민후의 아이디어 스케치" class="w-full h-full object-cover">
-                                <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-between p-4 text-white">
-                                    <p class="font-bold text-lg">"엄마, 내가 보기 편한 앱 만들래!"</p>
-                                    <p class="text-sm">기존 앱들의 복잡한 정보와 부정확한 위치 기반 데이터에 불편함을 느낀 민후가 직접 앱 개발을 결심했습니다.</p>
-                                </div>
-                            </div>
-                            <!-- 민후의 재능 -->
-                            <div class="relative rounded-lg overflow-hidden shadow-lg h-64">
-                                <!-- GPS 지도 이미지 (권장 사이즈: 400x300) -->
-                                <img src="https://res.cloudinary.com/dnswboo5z/image/upload/v1755054245/MINHOO_UNIVERS_r7zzjt.png" alt="GPS 지도" class="w-full h-full object-cover">
-                                <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-between p-4 text-white">
-                                    <p class="font-bold text-lg">"4살부터 모든 내비게이션을 섭렵한 GPS 전문가"</p>
-                                    <p class="text-sm">민후는 직접 공공데이터포털에서 가장 정확한 관측소 API를 찾아내고, 사용자에게 꼭 필요한 정보만 보여주는 UI를 구상한 핵심 기획자입니다.</p>
-                                </div>
-                            </div>
-                            <!-- 유튜브 영상 -->
-                             <div class="rounded-lg overflow-hidden shadow-lg h-64 bg-black">
-                                <div class="youtube-container">
-                                    <!-- 유튜브 쇼츠(Shorts)는 embed 형식으로 주소를 변경해야 합니다. -->
-                                    <iframe src="https://www.youtube.com/embed/G8yIXZVppMo" title="공공데이터 포털?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                </div>
-                            </div>
+                    <!-- 카드 2: 아이디어의 시작 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                        <img src="https://res.cloudinary.com/dnswboo5z/image/upload/v1755053961/idea-minhoo_od0jxw.png" alt="민후의 아이디어 스케치" class="w-full h-48 object-cover">
+                        <div class="p-4 flex-grow">
+                            <h4 class="font-bold text-lg mb-2">"내가 보기 편한 앱 만들래!"</h4>
+                            <p class="text-sm text-gray-600">기존 앱들의 복잡한 정보와 부정확한 위치 데이터에 불편함을 느낀 민후가 직접 앱 개발을 결심했습니다.</p>
+                        </div>
+                    </div>
+                    <!-- 카드 3: 민후의 재능 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                        <img src="https://res.cloudinary.com/dnswboo5z/image/upload/v1755054245/MINHOO_UNIVERS_r7zzjt.png" alt="GPS 지도" class="w-full h-48 object-cover">
+                        <div class="p-4 flex-grow">
+                            <h4 class="font-bold text-lg mb-2">꼬마 GPS 전문가</h4>
+                            <p class="text-sm text-gray-600">민후는 직접 공공데이터 API를 찾아내고, 사용자에게 꼭 필요한 정보만 보여주는 UI를 구상했습니다.</p>
+                        </div>
+                    </div>
+                    <!-- 카드 4: 유튜브 영상 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
+                        <div class="youtube-container">
+                            <iframe src="https://www.youtube.com/embed/G8yIXZVppMo" title="공공데이터 포털?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                        <div class="p-4 flex-grow">
+                             <h4 class="font-bold text-lg mb-2">API를 찾아서</h4>
+                            <p class="text-sm text-gray-600">민후가 직접 공공데이터포털을 탐색하며 앱에 필요한 API를 찾아내는 실제 영상입니다.</p>
                         </div>
                     </div>
                 </div>
