@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로젝트: 후다닥 미세먼지 피하기 - 2e-studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- 헤더 -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600">2e-studio</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html#about" class="text-gray-600 hover:text-blue-500">About 2e-studio</a>
+                <a href="index.html#projects" class="text-gray-600 hover:text-blue-500">Projects</a>
+                <a href="hudadak.html" class="text-blue-600 font-bold">후다닥 미세먼지</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- 모바일 메뉴 -->
+        <div id="mobile-menu" class="md:hidden hidden px-6 pb-4">
+            <a href="index.html#about" class="block py-2 text-gray-600 hover:text-blue-500">About 2e-studio</a>
+            <a href="index.html#projects" class="block py-2 text-gray-600 hover:text-blue-500">Projects</a>
+            <a href="hudadak.html" class="block py-2 text-blue-600 font-bold">후다닥 미세먼지</a>
+        </div>
+    </header>
+
+    <main class="py-16 md:py-24">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-800">후다닥 미세먼지 피하기</h1>
+                <p class="mt-4 text-xl text-gray-500">9살 기획자의 시선으로 재해석한 가장 직관적인 미세먼지 앱</p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+                <!-- 앱 이미지 -->
+                <div class="w-full max-w-xs flex-shrink-0">
+                    <div class="aspect-[9/16] bg-gray-200 rounded-3xl p-4 shadow-2xl">
+                        <img src="https://res.cloudinary.com/dnswboo5z/image/upload/v1755052753/hudadak-3min2_pfa0og.png" alt="후다닥 미세먼지 앱 스크린샷" class="w-full h-full object-cover rounded-xl">
+                    </div>
+                </div>
+
+                <!-- 기능 및 기술 스택 설명 -->
+                <div class="w-full">
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <h2 class="text-2xl font-bold mb-6 pb-3 border-b">주요 기능</h2>
+                        <ul class="space-y-4 text-gray-700">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-blue-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                <span><strong>가장 정확한 내 위치 정보:</strong> GPS 기반의 동네별 데이터가 아닌, 한국환경공단(에어코리아)에서 제공하는 가장 가까운 측정소의 실시간 데이터를 직접 받아와 정확도를 높였습니다.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-blue-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
+                                <span><strong>아이 눈높이 맞춤 UI:</strong> 복잡한 숫자와 그래프 대신, 민후가 직접 그린 귀여운 캐릭터의 표정과 색상으로 공기질 상태를 한눈에 파악할 수 있습니다.</span>
+                            </li>
+                             <li class="flex items-start">
+                                <svg class="w-6 h-6 text-blue-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+                                <span><strong>상태별 맞춤 알림:</strong> 미세먼지 수치가 '나쁨' 이상일 경우, 외출 자제나 마스크 착용 등 캐릭터가 상황에 맞는 행동 요령을 알려줍니다.</span>
+                            </li>
+                        </ul>
+
+                        <h2 class="text-2xl font-bold mt-10 mb-6 pb-3 border-b">기술 스택</h2>
+                        <ul class="space-y-4 text-gray-700">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-blue-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                                <span><strong>핵심 프레임워크:</strong> 하나의 코드로 안드로이드와 iOS 모두 대응 가능한 React Native를 사용하여 개발 효율성을 높였습니다.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-blue-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4M4 7l8 4-8 4"></path></svg>
+                                <span><strong>데이터 소스:</strong> 공공데이터포털에서 제공하는 '대기오염정보 조회 서비스'의 REST API를 활용하여 신뢰도 높은 데이터를 안정적으로 수급합니다.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-blue-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span><strong>상태 관리:</strong> 복잡한 데이터 흐름을 효율적으로 관리하고 앱의 반응성을 극대화하기 위해 전역 상태 관리 라이브러리인 Zustand를 도입했습니다.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+                <div>
+                    <h3 class="text-xl font-bold">2e-studio</h3>
+                    <p class="text-gray-400 mt-2">Developer: 맹난영</p>
+                    <p class="text-gray-400">Email: <a href="mailto:maengnanyoung@gmail.com" class="hover:underline">maengnanyoung@gmail.com</a></p>
+                </div>
+                <div class="mt-6 md:mt-0">
+                    <p class="text-gray-400">&copy; 2025 2e-studio. All Rights Reserved.</p>
+                    <a href="privacy.html" class="text-gray-400 hover:underline mt-2 inline-block">개인정보처리방침</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 모바일 메뉴 토글
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
