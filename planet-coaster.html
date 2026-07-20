@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플래닛 코스터 놀이기구 - 2e-studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- 헤더 -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600">2e-studio</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html#about" class="text-gray-600 hover:text-blue-500">About 2e-studio</a>
+                <a href="index.html#projects" class="text-gray-600 hover:text-blue-500">Projects</a>
+                <a href="hudadak.html" class="text-gray-600 hover:text-blue-500">후다닥 미세먼지</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- 모바일 메뉴 -->
+        <div id="mobile-menu" class="md:hidden hidden px-6 pb-4">
+            <a href="index.html#about" class="block py-2 text-gray-600 hover:text-blue-500">About 2e-studio</a>
+            <a href="index.html#projects" class="block py-2 text-gray-600 hover:text-blue-500">Projects</a>
+            <a href="hudadak.html" class="block py-2 text-gray-600 hover:text-blue-500">후다닥 미세먼지</a>
+        </div>
+    </header>
+
+    <main class="py-16 md:py-24">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-800">플래닛 코스터 놀이기구</h1>
+                <p class="mt-4 text-xl text-gray-500">by 민후</p>
+                <p class="mt-2 text-gray-500">게임 '플래닛 코스터'로 직접 설계하고 만든 놀이기구 작품 모음</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto space-y-8">
+                <!-- 스크린샷 자리 -->
+                <div class="border-2 border-dashed border-gray-300 rounded-lg bg-gray-100 text-gray-400 flex flex-col items-center justify-center text-center p-8 h-64">
+                    <span class="text-4xl mb-3" role="img" aria-label="사진">🖼️</span>
+                    <p class="font-semibold">스크린샷 준비 중</p>
+                    <p class="text-sm mt-1">민후의 놀이기구 사진이 곧 이곳에 채워집니다.</p>
+                </div>
+
+                <!-- 영상 자리 -->
+                <div class="border-2 border-dashed border-gray-300 rounded-lg bg-gray-100 text-gray-400 flex flex-col items-center justify-center text-center p-8 h-64">
+                    <span class="text-4xl mb-3" role="img" aria-label="영상">🎬</span>
+                    <p class="font-semibold">영상 준비 중</p>
+                    <p class="text-sm mt-1">놀이기구 주행 영상이 곧 이곳에 채워집니다.</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-16">
+                <a href="index.html#projects" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors duration-300">
+                    프로젝트 목록으로 돌아가기
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <h3 class="text-xl font-bold mb-4">2e-studio</h3>
+                <div class="space-y-1 text-sm text-gray-400 leading-relaxed">
+                    <p><span class="text-gray-200 font-semibold">CASP ENGINE</span> · Cognitive–Adaptive Stress Paralinguistic Engine</p>
+                    <p><span class="text-gray-200 font-semibold">SLDA</span> · Semantic Logic Drift Analysis · 의미·논리 드리프트 분석</p>
+                    <p class="pt-3">소울스펙트럼 주식회사 · 대표 맹난영 · 사업자등록번호 651-81-03691 · 010-7940-5553</p>
+                    <p>인천광역시 연수구 테크노파크로111번길 5, 8층 801-에스7호</p>
+                    <p>업종: 정보통신업 · 소프트웨어개발</p>
+                    <p>개인정보보호책임자: 대표 맹난영 · <a href="mailto:nanyoung@soulspectrum.kr" class="hover:underline">nanyoung@soulspectrum.kr</a></p>
+                </div>
+                <div class="mt-6 pt-6 border-t border-gray-700 flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 text-sm text-gray-400">
+                    <a href="https://soulspectrum.kr" target="_blank" rel="noopener noreferrer" class="hover:underline">soulspectrum.kr</a>
+                    <span class="hidden sm:inline">·</span>
+                    <a href="privacy.html" class="hover:underline">개인정보처리방침</a>
+                    <span class="hidden sm:inline">·</span>
+                    <span>© Soul Spectrum Inc. All rights reserved.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 모바일 메뉴 토글
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

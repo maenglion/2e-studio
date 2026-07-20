@@ -67,9 +67,9 @@
         <section class="relative w-full h-[300px] md:h-[500px] overflow-hidden">
             <!-- 슬라이드 이미지들 (권장 사이즈: 1200x500) -->
             <div id="slider">
-                <img src="https://res.cloudinary.com/dnswboo5z/image/upload/v1755055345/main-image2_tdlwp7.png" alt="슬라이드 이미지 1" class="slide active w-full h-full object-cover">
-                <img src="https://res.cloudinary.com/dnswboo5z/image/upload/v1755148366/2e-%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80-%EB%A9%94%EC%9D%B83-2_nlzfi4.png" alt="슬라이드 이미지 2" class="slide w-full h-full object-cover">
-                <img src="https://res.cloudinary.com/dnswboo5z/image/upload/v1755055344/2e-studio-main_my2oek.png" alt="슬라이드 이미지 3" class="slide w-full h-full object-cover">
+                <img src="https://res.cloudinary.com/dnswboo5z/image/upload/f_auto,q_auto,w_1200/v1755055345/main-image2_tdlwp7.png" alt="슬라이드 이미지 1" class="slide active w-full h-full object-cover">
+                <img src="https://res.cloudinary.com/dnswboo5z/image/upload/f_auto,q_auto,w_1200/v1755148366/2e-%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80-%EB%A9%94%EC%9D%B83-2_nlzfi4.png" alt="슬라이드 이미지 2" class="slide w-full h-full object-cover">
+                <img src="https://res.cloudinary.com/dnswboo5z/image/upload/f_auto,q_auto,w_1200/v1755055344/2e-studio-main_my2oek.png" alt="슬라이드 이미지 3" class="slide w-full h-full object-cover">
             </div>
         </section>
 
@@ -86,7 +86,7 @@
                 <div class="mt-12 md:flex items-center gap-8">
                     <!-- 민후 사진 (기사 페이지 스타일, 권장 사이즈: 400x400) -->
                     <div class="md:w-1/3 mb-8 md:mb-0">
-                        <img src="https://res.cloudinary.com/dnswboo5z/image/upload/v1755055551/minhoo-profile_kzsumc.png" alt="기획자 민후" class="rounded-lg shadow-xl mx-auto">
+                        <img src="https://res.cloudinary.com/dnswboo5z/image/upload/f_auto,q_auto,w_400/v1755055551/minhoo-profile_kzsumc.png" alt="기획자 민후" class="rounded-lg shadow-xl mx-auto">
                     </div>
                     <div class="md:w-2/3">
                         <h3 class="text-2xl font-bold mb-4">꼬꼬마 기획자, 민후를 소개합니다</h3>
@@ -107,17 +107,24 @@
                     
                    <!-- 프로젝트 1: 간헐적 단식앱 -->
                   <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                      <img src="https://res.cloudinary.com/dnswboo5z/image/upload/v1755442061/fastmate_gbsqfr.png" alt="Fastmate 앱" class="w-full h-48 object-cover">
+                      <img src="https://res.cloudinary.com/dnswboo5z/image/upload/f_auto,q_auto,w_600/v1755442061/fastmate_gbsqfr.png" alt="Fastmate 앱" class="w-full h-48 object-cover">
                       <div class="p-6">
                           <h3 class="text-2xl font-bold mb-2">Fastmate</h3>
                           <p class="text-gray-600 mb-4">당뇨 가족력으로 간헐적 단식을 실천하는 가족을 위해 탄생한 건강 관리 앱입니다. 단순 시간 기록을 넘어, 케토시스 상태 파악을 위한 케톤 수치 관리 기능의 필요성을 느껴 직접 개발했습니다.</p>
-                          <div class="mb-4">
-                              <p class="text-sm font-semibold text-gray-700 mb-2">🆕 새로운 기능</p>
-                              <ul class="space-y-1 text-sm text-gray-600 list-disc list-inside">
-                                  <li><strong>단식 기간 내 나의 변화:</strong> 단식 기간 동안 나타나는 몸과 컨디션의 변화를 한눈에 확인</li>
-                                  <li><strong>구글 헬스 연동</strong> <span class="text-xs text-gray-400">(예정)</span></li>
-                              </ul>
-                          </div>
+                          <ul class="space-y-2 text-sm text-gray-600 mb-4">
+                              <li class="flex items-start gap-2">
+                                  <span class="flex-shrink-0 mt-0.5 text-xs font-bold text-green-700 bg-green-100 px-2 py-0.5 rounded">구현</span>
+                                  <span><strong>단식 기록별 상세</strong> — 각 기록을 탭하면 그 구간의 데이터만 별도로 조회</span>
+                              </li>
+                              <li class="flex items-start gap-2">
+                                  <span class="flex-shrink-0 mt-0.5 text-xs font-bold text-green-700 bg-green-100 px-2 py-0.5 rounded">구현</span>
+                                  <span><strong>오토파지 모드</strong> — 3일 저탄고지·케토 후 36시간 단식으로 자동 전환</span>
+                              </li>
+                              <li class="flex items-start gap-2">
+                                  <span class="flex-shrink-0 mt-0.5 text-xs font-bold text-amber-700 bg-amber-100 px-2 py-0.5 rounded">연동 예정</span>
+                                  <span><strong>구글 헬스</strong> — 설정 UI는 구현 완료, 비용 이슈로 활성화 대기 중</span>
+                              </li>
+                          </ul>
                           <a href="https://fastmate.kr" target="_blank" class="text-blue-600 font-semibold hover:underline">앱 방문하기 &rarr;</a>
                       </div>
                   </div>
@@ -126,28 +133,40 @@
                     <!-- 프로젝트 2: 후다닥 미세먼지 피하기 -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
                         <!-- 썸네일 이미지 (권장 사이즈: 600x400) -->
-                        <img src="https://res.cloudinary.com/dnswboo5z/image/upload/v1755053655/hudadak-air-thumbnail_h5ohtq.png" alt="후다닥 미세먼지 피하기" class="w-full h-48 object-cover">
+                        <img src="https://res.cloudinary.com/dnswboo5z/image/upload/f_auto,q_auto,w_600/v1755053655/hudadak-air-thumbnail_h5ohtq.png" alt="후다닥 미세먼지 피하기" class="w-full h-48 object-cover">
                         <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-2">후다닥 미세먼지 피하기</h3>
-                            <p class="text-gray-600 mb-4">가장 가까운 관측소의 정확한 데이터를, 아이의 눈높이에 맞춘 직관적인 UI로 보여주는 미세먼지 정보 앱입니다.</p>
-                            <div class="mb-4">
-                                <p class="text-sm font-semibold text-gray-700 mb-2">🆕 업데이트 소식</p>
-                                <ul class="space-y-1 text-sm text-gray-600 list-disc list-inside">
-                                    <li>버전 업그레이드</li>
-                                    <li>네이티브 앱 출시</li>
-                                </ul>
+                            <div class="flex items-center gap-2 mb-2 flex-wrap">
+                                <h3 class="text-2xl font-bold">후다닥 미세먼지 피하기</h3>
+                                <span class="inline-block bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full">📱 네이티브 앱 개발 중</span>
                             </div>
-                            <a href="#hudadak" class="text-blue-600 font-semibold hover:underline">자세히 보기 &rarr;</a>
+                            <p class="text-gray-600 mb-4">가장 가까운 관측소의 정확한 데이터를, 아이의 눈높이에 맞춘 직관적인 UI로 보여주는 미세먼지 정보 앱입니다.</p>
+                            <div class="flex items-center gap-4">
+                                <a href="https://app-hudadak.netlify.app" target="_blank" rel="noopener noreferrer" class="text-blue-600 font-semibold hover:underline">웹 앱 바로가기 &rarr;</a>
+                                <a href="#hudadak" class="text-gray-500 font-semibold hover:underline">자세히 보기 &rarr;</a>
+                            </div>
                         </div>
                     </div>
                     <!-- 프로젝트 3: Shrimp Predictor -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
                         <!-- 썸네일 이미지 (권장 사이즈: 600x400) -->
-                        <img src="https://res.cloudinary.com/dnswboo5z/image/upload/v1755055867/shrimp_predictor_pjmduy.png" alt="Shrimp Predictor" class="w-full h-48 object-cover">
+                        <img src="https://res.cloudinary.com/dnswboo5z/image/upload/f_auto,q_auto,w_600/v1755055867/shrimp_predictor_pjmduy.png" alt="Shrimp Predictor" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h3 class="text-2xl font-bold mb-2">Shrimp Predictor</h3>
                             <p class="text-gray-600 mb-4">새우를 사랑하는 민후가 직접 기획한 관상용 새우 색상 유전 예상 프로그램. 부모 새우의 정보를 입력하면 2세의 색상을 예측해줍니다.</p>
                             <a href="https://shrimp-predictor.netlify.app/" class="text-gray-400 font-semibold cursor-not-allowed">준비 중입니다...</a>
+                        </div>
+                    </div>
+                    <!-- 프로젝트 4: 플래닛 코스터 놀이기구 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <!-- 플레이스홀더 이미지 영역 -->
+                        <div class="w-full h-48 bg-gray-100 flex items-center justify-center">
+                            <span class="text-4xl" role="img" aria-label="롤러코스터">🎢</span>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-1">플래닛 코스터 놀이기구</h3>
+                            <p class="text-sm text-gray-400 mb-2">by 민후</p>
+                            <p class="text-gray-600 mb-4">게임 '플래닛 코스터'로 민후가 직접 설계하고 만든 놀이기구 작품들을 소개합니다.</p>
+                            <a href="planet-coaster.html" class="text-blue-600 font-semibold hover:underline">보러 가기 &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -176,7 +195,7 @@ https://docs.google.com/forms/d/e/1FAIpQLSeWY_zFqgoXMeZtRmnRzua6vsaNEyNGVzme1Iqt
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <!-- 카드 1: 대표 이미지 -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
-                        <img src="https://res.cloudinary.com/dnswboo5z/image/upload/v1755150388/baby_developer_jqtbwa.png" alt="후다닥 미세먼지 대표 이미지" class="w-full h-48 object-cover">
+                        <img src="https://res.cloudinary.com/dnswboo5z/image/upload/f_auto,q_auto,w_400/v1755150388/baby_developer_jqtbwa.png" alt="후다닥 미세먼지 대표 이미지" class="w-full h-48 object-cover">
                         <div class="p-4 flex-grow">
                             <h4 class="font-bold text-lg mb-2">민후의 첫 작품</h4>
                             <p class="text-sm text-gray-600">불편함과 문제를 해결하려고 하는 아이의 적극적 의지로 후다닥 미세먼지 피하기가 탄생하였습니다.</p>
@@ -184,7 +203,7 @@ https://docs.google.com/forms/d/e/1FAIpQLSeWY_zFqgoXMeZtRmnRzua6vsaNEyNGVzme1Iqt
                     </div>
                     <!-- 카드 2: 아이디어의 시작 -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
-                        <img src="https://res.cloudinary.com/dnswboo5z/image/upload/v1755053961/idea-minhoo_od0jxw.png" alt="민후의 아이디어 스케치" class="w-full h-48 object-cover">
+                        <img src="https://res.cloudinary.com/dnswboo5z/image/upload/f_auto,q_auto,w_400/v1755053961/idea-minhoo_od0jxw.png" alt="민후의 아이디어 스케치" class="w-full h-48 object-cover">
                         <div class="p-4 flex-grow">
                             <h4 class="font-bold text-lg mb-2">"내가 보기 편한 앱 만들래!"</h4>
                             <p class="text-sm text-gray-600">기존 앱들의 복잡한 정보와 부정확한 위치 데이터에 불편함을 느낀 민후가 직접 앱 개발을 결심했습니다.</p>
@@ -192,7 +211,7 @@ https://docs.google.com/forms/d/e/1FAIpQLSeWY_zFqgoXMeZtRmnRzua6vsaNEyNGVzme1Iqt
                     </div>
                     <!-- 카드 3: 민후의 재능 -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
-                        <img src="https://res.cloudinary.com/dnswboo5z/image/upload/v1755054245/MINHOO_UNIVERS_r7zzjt.png" alt="GPS 지도" class="w-full h-48 object-cover">
+                        <img src="https://res.cloudinary.com/dnswboo5z/image/upload/f_auto,q_auto,w_400/v1755054245/MINHOO_UNIVERS_r7zzjt.png" alt="GPS 지도" class="w-full h-48 object-cover">
                         <div class="p-4 flex-grow">
                             <h4 class="font-bold text-lg mb-2">꼬마 GPS 전문가</h4>
                             <p class="text-sm text-gray-600">민후는 직접 공공데이터 API를 찾아내고, 사용자에게 꼭 필요한 정보만 보여주는 UI를 구상했습니다.</p>
