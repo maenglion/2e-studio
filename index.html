@@ -36,11 +36,37 @@
             height: 100%;
         }
     </style>
+    <!-- Soul Spectrum 톤 (theme.css 기반 팔레트·타이포) -->
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/static/pretendard.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --navy:#004189; --navy-dark:#00305f; --teal:#0F8EA8; --gnb-from:#1B74C7; --gnb-to:#036E8D; --ink:#061524; }
+        body { font-family: "Pretendard", "Inter", -apple-system, BlinkMacSystemFont, system-ui, "Noto Sans KR", sans-serif; }
+        /* GNB — soulspectrum 그라데이션 바, 흰색 링크 */
+        .ss-header { background: linear-gradient(100deg, var(--gnb-from), var(--gnb-to)) !important; box-shadow: 0 2px 12px rgba(3,110,141,.18) !important; }
+        .ss-header a { color: #fff !important; }
+        .ss-header .text-gray-600 { color: rgba(255,255,255,.9) !important; }
+        .ss-header .text-gray-600:hover { color: #fff !important; }
+        .ss-header button { color: #fff !important; }
+        /* 액센트 — 블루 → 네이비/틸 */
+        .text-blue-600 { color: var(--navy) !important; }
+        .text-blue-500 { color: var(--teal) !important; }
+        .text-blue-700, .text-blue-800 { color: var(--navy) !important; }
+        .hover\:text-blue-500:hover { color: var(--teal) !important; }
+        .hover\:text-blue-700:hover { color: var(--navy-dark) !important; }
+        .bg-blue-600 { background-color: var(--navy) !important; }
+        .hover\:bg-blue-700:hover { background-color: var(--navy-dark) !important; }
+        .bg-blue-50 { background-color: #eef6f9 !important; }
+        .bg-blue-100 { background-color: rgba(15,142,168,.12) !important; }
+        .border-blue-500 { border-color: var(--teal) !important; }
+        /* 헤더 안 로고/활성 링크는 흰색 유지 */
+        .ss-header .text-blue-600, .ss-header .text-blue-500 { color: #fff !important; }
+    </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
     <!-- 헤더 -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
+    <header class="ss-header bg-white shadow-md sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="text-2xl font-bold text-blue-600">2e-studio</a>
             <div class="hidden md:flex space-x-8">
@@ -222,9 +248,7 @@
             <div class="max-w-4xl mx-auto text-center">
                 <h3 class="text-xl font-bold mb-4">2e-studio</h3>
                 <div class="space-y-1 text-sm text-gray-400 leading-relaxed">
-                    <p><span class="text-gray-200 font-semibold">CASP ENGINE</span> · Cognitive–Adaptive Stress Paralinguistic Engine</p>
-                    <p><span class="text-gray-200 font-semibold">SLDA</span> · Semantic Logic Drift Analysis · 의미·논리 드리프트 분석</p>
-                    <p class="pt-3">주식회사 소울스펙트럼 · 대표 맹난영 · 사업자등록번호 651-81-03691 · 010-7940-5553</p>
+                    <p>주식회사 소울스펙트럼 · 대표 맹난영 · 사업자등록번호 651-81-03691 · 010-7940-5553</p>
                     <p>인천광역시 연수구 테크노파크로111번길 5, 8층 801-에스7호</p>
                     <p>업종: 정보통신업 · 소프트웨어개발</p>
                     <p>개인정보보호책임자: 대표 맹난영 · <a href="mailto:nanyoung@soulspectrum.kr" class="hover:underline">nanyoung@soulspectrum.kr</a></p>
