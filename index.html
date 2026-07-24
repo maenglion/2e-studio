@@ -146,22 +146,33 @@
                       </div>
                   </div>
 
-                    <!-- 프로젝트 2: 후다닥 미세먼지 피하기 (ver.4.0) -->
+                    <!-- 프로젝트 2: 후다닥 미세먼지 피하기 (ver.5.1) -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
                         <img src="https://res.cloudinary.com/dnswboo5z/image/upload/f_auto,q_auto,w_600/v1755053655/hudadak-air-thumbnail_h5ohtq.png" alt="후다닥 미세먼지 피하기" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <div class="flex items-center gap-2 mb-2">
                                 <h3 class="text-2xl font-bold">후다닥 미세먼지 피하기</h3>
-                                <span class="text-xs font-semibold bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">ver.4.0</span>
+                                <span class="text-xs font-semibold bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">ver.5.1</span>
                             </div>
-                            <p class="text-gray-600 mb-3">가장 가까운 관측소의 실측값을 우선 표시하고, 모델 예측은 '예측'으로 구분해 보여주는 미세먼지 정보 앱입니다. 서버 주기 수집 + DB 캐시 구조로 개편했고, 해외 신뢰도 데이터(Open-Meteo·WAQI·OpenAQ)와 NASA FIRMS 산불 포인트, 날씨·자외선·황사 지표를 통합했습니다.</p>
+                            <div class="space-y-3 text-gray-600 mb-4 leading-relaxed">
+                                <p>후다닥 미세먼지 피하기는 9살 기획자 민후가 기존 대기질 앱의 복잡한 정보와 부정확한 위치 표시를 불편해하며 직접 기획한 가족용 대기질 앱입니다. 아이디어, 화면 구성, 필요한 정보와 API 탐색 과정은 Notion에 기록했고, 엄마가 이를 웹 앱, Android 앱과 홈 화면 위젯으로 구현했습니다.</p>
+                                <p>현재 운영 주체는 영리법인인 (주)소울스펙트럼이지만, 이 앱은 수익을 목적으로 하지 않는 무료 가족 프로젝트입니다. 현재 Google Play 비공개 테스트 단계이며 가족 7명이 사용하고 있습니다. 광고, 구독, 유료 결제, 후원 및 데이터 판매는 없습니다.</p>
+                                <p>현재 관측값을 우선 표시하고 예측값은 ‘예측’으로 명확히 구분합니다. WAQI 인제스터는 3시간마다 실행되어 하루 총 8회 데이터를 수집합니다. 앱과 위젯의 안정적인 표시 및 반복적인 외부 API 호출 감소를 위해 최신 관측값을 서버 DB에 임시 저장합니다.</p>
+                            </div>
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="text-xs border border-green-500 text-green-600 px-2 py-0.5 rounded-full">웹 안정</span>
-                                <span class="text-xs border border-amber-500 text-amber-600 px-2 py-0.5 rounded-full">네이티브 앱 개발 중</span>
+                                <span class="text-xs border border-amber-500 text-amber-600 px-2 py-0.5 rounded-full">Android 비공개 테스트 중</span>
                             </div>
-                            <div class="flex gap-4">
-                                <a href="https://app-hudadak.netlify.app" target="_blank" rel="noopener" class="text-blue-600 font-semibold hover:underline">앱 열기 &rarr;</a>
+                            <div class="flex flex-wrap gap-4">
+                                <a href="https://app-hudadak.netlify.app" target="_blank" rel="noopener noreferrer" class="text-blue-600 font-semibold hover:underline">앱 열기 &rarr;</a>
+                                <a href="https://www.notion.so/maenglionworld/HUDADAK-1-286bcdc037cd80fe931cf808c5159b34?source=copy_link" target="_blank" rel="noopener noreferrer" class="text-blue-600 font-semibold hover:underline">기획 기록 보기 &rarr;</a>
                                 <a href="#hudadak" class="text-gray-500 font-semibold hover:underline">자세히 보기 &rarr;</a>
+                            </div>
+                            <div lang="en" class="mt-6 rounded-lg bg-blue-50 p-5 text-sm text-gray-700 leading-relaxed space-y-3">
+                                <h4 class="font-bold text-blue-900">About Hudadak Air</h4>
+                                <p>Hudadak Air was conceived by Minhoo, a nine-year-old planner who found existing air-quality apps too complex and their location labels unreliable. The planning process, including the information architecture, screen flow, and API research, is documented in Notion. His mother implemented the idea as a web app, an Android app, and a home-screen widget.</p>
+                                <p>Although the app is operated by Soul Spectrum Co., Ltd., a for-profit company, Hudadak Air is currently a free and non-commercial family project. It is distributed through closed Google Play testing and currently has approximately seven family users. The app has no purchase price, subscriptions, advertising, sponsorship, or data sales.</p>
+                                <p>Current observations are prioritized, while forecast values are clearly identified as predictions. The WAQI ingestion job runs every three hours, for a total of eight scheduled runs per day. The latest observation is temporarily stored in our server database to support reliable app and widget display and to reduce repeated external API requests. WAQI and the original data providers are credited in the app.</p>
                             </div>
                         </div>
                     </div>
@@ -178,7 +189,7 @@
                     <!-- 프로젝트 4: 플래닛 코스터 놀이기구 -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
                         <!-- 플레이스홀더 이미지 영역 -->
-                        <div class="w-full h-48 bg-gray-100 flex items-center justify-center">
+                        <div class="w-full h-48 bg-[#007BA7] flex items-center justify-center">
                             <span class="text-4xl" role="img" aria-label="롤러코스터">🎢</span>
                         </div>
                         <div class="p-6">
