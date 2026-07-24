@@ -166,9 +166,11 @@
                             <div class="flex flex-wrap gap-4">
                                 <a href="https://app-hudadak.netlify.app" target="_blank" rel="noopener noreferrer" class="text-blue-600 font-semibold hover:underline">앱 열기 &rarr;</a>
                                 <a href="https://www.notion.so/maenglionworld/HUDADAK-1-286bcdc037cd80fe931cf808c5159b34?source=copy_link" target="_blank" rel="noopener noreferrer" class="text-blue-600 font-semibold hover:underline">기획 기록 보기 &rarr;</a>
-                                <a href="#hudadak" class="text-gray-500 font-semibold hover:underline">자세히 보기 &rarr;</a>
+                                <button id="hudadak-english-toggle" type="button" class="text-gray-500 font-semibold hover:underline" aria-expanded="false" aria-controls="hudadak-english">
+                                    About Hudadak Air (ENG) &darr;
+                                </button>
                             </div>
-                            <div lang="en" class="mt-6 rounded-lg bg-blue-50 p-5 text-sm text-gray-700 leading-relaxed space-y-3">
+                            <div id="hudadak-english" lang="en" class="hidden mt-6 rounded-lg bg-blue-50 p-5 text-sm text-gray-700 leading-relaxed space-y-3">
                                 <h4 class="font-bold text-blue-900">About Hudadak Air</h4>
                                 <p>Hudadak Air was conceived by Minhoo, a nine-year-old planner who found existing air-quality apps too complex and their location labels unreliable. The planning process, including the information architecture, screen flow, and API research, is documented in Notion. His mother implemented the idea as a web app, an Android app, and a home-screen widget.</p>
                                 <p>Although the app is operated by Soul Spectrum Co., Ltd., a for-profit company, Hudadak Air is currently a free and non-commercial family project. It is distributed through closed Google Play testing and currently has approximately seven family users. The app has no purchase price, subscriptions, advertising, sponsorship, or data sales.</p>
@@ -280,6 +282,18 @@
         const mobileMenu = document.getElementById('mobile-menu');
         menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
+        });
+
+        // 후다닥 영문 설명 토글
+        const hudadakEnglishToggle = document.getElementById('hudadak-english-toggle');
+        const hudadakEnglish = document.getElementById('hudadak-english');
+        hudadakEnglishToggle.addEventListener('click', () => {
+            const isOpen = hudadakEnglishToggle.getAttribute('aria-expanded') === 'true';
+            hudadakEnglish.classList.toggle('hidden', isOpen);
+            hudadakEnglishToggle.setAttribute('aria-expanded', String(!isOpen));
+            hudadakEnglishToggle.innerHTML = isOpen
+                ? 'About Hudadak Air (ENG) &darr;'
+                : 'Close English description &uarr;';
         });
 
         // 이미지 슬라이더
