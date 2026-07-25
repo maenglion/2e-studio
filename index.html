@@ -1,325 +1,155 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2e-studio | 특별한 아이가 만드는 세상</title>
+    <title>Soul Spectrum Inc. · 2e Studio</title>
+    <meta name="description" content="2e Studio supports neurodivergent children's intense interests and helps turn them into real, shipping products. Rooted in lived experience of AuDHD.">
+    <meta name="robots" content="index, follow">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
-    <style>
-        /* Noto Sans KR 폰트 적용 */
-        body {
-            font-family: 'Noto Sans KR', sans-serif;
-        }
-        /* 슬라이더 애니메이션 */
-        .slide {
-            display: none;
-            transition: opacity 1s ease-in-out;
-        }
-        .slide.active {
-            display: block;
-        }
-        /* 유튜브 반응형 */
-        .youtube-container {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-        }
-        .youtube-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-    </style>
-    <!-- Soul Spectrum 톤 (theme.css 기반 팔레트·타이포) -->
-    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/static/pretendard.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root { --navy:#004189; --navy-dark:#00305f; --teal:#0F8EA8; --gnb-from:#1B74C7; --gnb-to:#036E8D; --ink:#061524; }
-        body { font-family: "Pretendard", "Inter", -apple-system, BlinkMacSystemFont, system-ui, "Noto Sans KR", sans-serif; }
-        /* GNB — soulspectrum 그라데이션 바, 흰색 링크 */
-        .ss-header { background: linear-gradient(100deg, var(--gnb-from), var(--gnb-to)) !important; box-shadow: 0 2px 12px rgba(3,110,141,.18) !important; }
-        .ss-header a { color: #fff !important; }
-        .ss-header .text-gray-600 { color: rgba(255,255,255,.9) !important; }
-        .ss-header .text-gray-600:hover { color: #fff !important; }
-        .ss-header button { color: #fff !important; }
-        /* 액센트 — 블루 → 네이비/틸 */
-        .text-blue-600 { color: var(--navy) !important; }
-        .text-blue-500 { color: var(--teal) !important; }
-        .text-blue-700, .text-blue-800 { color: var(--navy) !important; }
-        .hover\:text-blue-500:hover { color: var(--teal) !important; }
-        .hover\:text-blue-700:hover { color: var(--navy-dark) !important; }
-        .bg-blue-600 { background-color: var(--navy) !important; }
-        .hover\:bg-blue-700:hover { background-color: var(--navy-dark) !important; }
-        .bg-blue-50 { background-color: #eef6f9 !important; }
-        .bg-blue-100 { background-color: rgba(15,142,168,.12) !important; }
-        .border-blue-500 { border-color: var(--teal) !important; }
-        /* 헤더 안 로고/활성 링크는 흰색 유지 */
-        .ss-header .text-blue-600, .ss-header .text-blue-500 { color: #fff !important; }
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-stone-50 text-stone-900">
 
-    <!-- 헤더 -->
-    <header class="ss-header bg-white shadow-md sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-blue-600">2e-studio</a>
-            <div class="hidden md:flex space-x-8">
-                <a href="#about" class="text-gray-600 hover:text-blue-500">About 2e-studio</a>
-                <a href="#projects" class="text-gray-600 hover:text-blue-500">Projects</a>
-                <a href="hudadak.html" class="text-gray-600 hover:text-blue-500">후다닥 미세먼지</a>
+    <!-- Header -->
+    <header class="bg-stone-50/90 backdrop-blur border-b border-stone-200 sticky top-0 z-50">
+        <nav class="max-w-3xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-semibold tracking-tight">Soul Spectrum <span class="text-stone-400 font-normal">/ 2e Studio</span></a>
+            <div class="hidden md:flex space-x-7 text-sm font-medium text-stone-600">
+                <a href="#approach" class="hover:text-stone-900">Approach</a>
+                <a href="#work" class="hover:text-stone-900">Work</a>
+                <a href="#team" class="hover:text-stone-900">Team</a>
+                <a href="#contact" class="hover:text-stone-900">Contact</a>
             </div>
             <div class="md:hidden">
-                <button id="menu-btn" class="text-gray-600 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                <button id="menu-btn" class="text-stone-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
         </nav>
-        <!-- 모바일 메뉴 -->
-        <div id="mobile-menu" class="md:hidden hidden px-6 pb-4">
-            <a href="#about" class="block py-2 text-gray-600 hover:text-blue-500">About 2e-studio</a>
-            <a href="#projects" class="block py-2 text-gray-600 hover:text-blue-500">Projects</a>
-            <a href="hudadak.html" class="block py-2 text-gray-600 hover:text-blue-500">후다닥 미세먼지</a>
+        <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 space-y-1 text-sm text-stone-600">
+            <a href="#approach" class="block py-1.5 hover:text-stone-900">Approach</a>
+            <a href="#work" class="block py-1.5 hover:text-stone-900">Work</a>
+            <a href="#team" class="block py-1.5 hover:text-stone-900">Team</a>
+            <a href="#contact" class="block py-1.5 hover:text-stone-900">Contact</a>
         </div>
     </header>
 
-    <main>
-        <!-- 메인 섹션 (Hero) -->
-        <section class="relative w-full h-[300px] md:h-[700px] overflow-hidden">
-            <!-- 슬라이드 이미지들 (권장 사이즈: 1200x500) -->
-            <div id="slider">
-                <img src="https://res.cloudinary.com/dnswboo5z/image/upload/f_auto,q_auto,w_1200/v1755055345/main-image2_tdlwp7.png" alt="슬라이드 이미지 1" class="slide active w-full h-full object-cover">
-                <img src="https://res.cloudinary.com/dnswboo5z/image/upload/f_auto,q_auto,w_1200/v1755148366/2e-%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80-%EB%A9%94%EC%9D%B83-2_nlzfi4.png" alt="슬라이드 이미지 2" class="slide w-full h-full object-cover">
-                <img src="https://res.cloudinary.com/dnswboo5z/image/upload/f_auto,q_auto,w_1200/v1755055344/2e-studio-main_my2oek.png" alt="슬라이드 이미지 3" class="slide w-full h-full object-cover">
+    <main class="max-w-3xl mx-auto px-6">
+
+        <!-- Home / Intro -->
+        <section id="home" class="pt-20 pb-16">
+            <h1 class="text-4xl md:text-5xl font-semibold tracking-tight leading-tight mb-4">Soul Spectrum Inc.</h1>
+            <p class="text-xl text-stone-500 mb-8">2e Studio</p>
+            <p class="text-lg text-stone-700 leading-relaxed mb-4">2e Studio supports neurodivergent children's intense interests and helps turn those interests into real, shipping products.</p>
+            <p class="text-lg text-stone-700 leading-relaxed">Rooted in lived experience of AuDHD, we work by building actual services and applications alongside the child rather than following conventional educational paths.</p>
+        </section>
+
+        <!-- Approach -->
+        <section id="approach" class="py-16 border-t border-stone-200">
+            <h2 class="text-2xl font-semibold tracking-tight mb-6">Approach</h2>
+            <div class="space-y-5 text-stone-700 leading-relaxed">
+                <p>Many children with AuDHD develop deep, focused interests that do not fit easily into standard classroom structures. Performance and capability often remain invisible when the environment prioritizes compliance over engagement with systems, data, and tools.</p>
+                <p>2e Studio starts from those interests. We treat them as the primary material for learning and product development. The goal is not to adapt the child to a fixed curriculum, but to create conditions where the child's way of noticing, organizing, and exploring information can become working software.</p>
+                <p>Projects are real. They have architecture, data models, interfaces, and iteration cycles. Adult involvement varies&mdash;sometimes denser scaffolding, sometimes lighter&mdash;always calibrated to the child's current capacity while steadily increasing completeness over time.</p>
             </div>
         </section>
 
-        <!-- About 2e-studio -->
-        <section id="about" class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="max-w-4xl mx-auto text-center">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-3">About 2e-studio</h2>
-                    <p class="text-blue-600 font-semibold mb-6">신경다양성 엄마와 아들의 서비스 기획·개발 교육</p>
-                    <p class="text-lg text-gray-600 mb-8">
-                        '2e-studio'는 <strong>'Twice-Exceptional(두 번 예외적인)'</strong>의 줄임말입니다. 뛰어난 재능과 동시에 학습 장애, 발달 장애, 또는 신경 다양성(예: ADHD, 자폐 스펙트럼 장애, 난독증 등)을 가진 사람을 뜻합니다. 이는 '결핍'이 아닌 '특별한 재능'에 주목하는 관점입니다. 9살 기획자 민후와 개발자 엄마는 바로 이 '2e'의 시선으로 세상을 탐험하고, 기술을 통해 우리만의 방식으로 세상에 기여하고자 합니다.
-                    </p>
+        <!-- Work -->
+        <section id="work" class="py-16 border-t border-stone-200">
+            <h2 class="text-2xl font-semibold tracking-tight mb-10">Work</h2>
+
+            <!-- Hudadak -->
+            <div class="mb-16">
+                <div class="flex items-center gap-3 mb-4">
+                    <h3 class="text-xl font-semibold">Hudadak</h3>
+                    <span class="text-xs font-medium text-stone-500 border border-stone-300 rounded-full px-2.5 py-0.5">Private · closed testing</span>
                 </div>
-                <div class="mt-12 md:flex items-center gap-8">
-                    <!-- 민후 사진 (기사 페이지 스타일, 권장 사이즈: 400x400) -->
-                    <div class="md:w-1/3 mb-8 md:mb-0">
-                        <img src="https://res.cloudinary.com/dnswboo5z/image/upload/f_auto,q_auto,w_400/v1755055551/minhoo-profile_kzsumc.png" alt="기획자 민후" class="rounded-lg shadow-xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-6 items-start">
+                    <div class="rounded-xl overflow-hidden border border-stone-200 bg-white">
+                        <img src="https://res.cloudinary.com/dnswboo5z/image/upload/f_auto,q_auto,w_800/v1785007090/%ED%9B%84%EB%8B%A4%EB%8B%A5-%EA%B8%B0%EB%B3%B8%EC%97%90-%EC%B6%A9%EC%8B%A4_eng_ok2tpz.png" alt="Hudadak — Back to basics: just PM10, PM2.5, and key gases" class="w-full h-auto">
                     </div>
-                    <div class="md:w-2/3">
-                        <h3 class="text-2xl font-bold mb-4">꼬꼬마 기획자, 민후를 소개합니다</h3>
-                        <p class="text-gray-600 leading-relaxed">
-                            민후는 세상을 자신만의 방식으로 탐색하는 아이입니다. 네 살 때부터 모든 내비게이션 경로를 외우고, 지도를 보며 길을 찾는 데 특별한 재능을 보였습니다. 우주의 원리에 대해 이해하고, 처음 보는 API 문서에서 원하는 기능을 찾아내는 능력은 어른들을 놀라게 합니다. '후다닥 미세먼지' 앱은 이런 민후의 재능과 불편함을 해결하려는 순수한 마음에서 시작된 첫 번째 프로젝트입니다.
-                        </p>
+                    <div class="space-y-4 text-stone-700 leading-relaxed">
+                        <p>A private Android app currently in closed testing on Google Play. It is not yet publicly available and coverage is limited to Korea, so no public link is provided at this stage.</p>
+                        <p>The interface was implemented as closely as possible from screens Minhu drew by hand while the project was being planned and shared in Notion.</p>
+                        <p>It ingests multiple public data APIs to maintain a stable data supply and includes home-screen widget support. A small group of family and friends are using it in testing form.</p>
+                        <div class="rounded-lg overflow-hidden border border-stone-200">
+                            <img src="https://res.cloudinary.com/dnswboo5z/image/upload/f_auto,q_auto,w_600/v1785007063/hudadak_widget_last_zjmgmb.png" alt="Hudadak home-screen widget showing live WAQI observed readings" class="w-full h-auto">
+                        </div>
+                        <p class="text-sm text-stone-500">Air quality and weather data provided by AirKorea (Korea Environment Corporation), the Korea Meteorological Administration (KMA), the <a href="https://waqi.info/" target="_blank" rel="noopener" class="underline hover:text-stone-700">World Air Quality Index project (WAQI)</a>, Open-Meteo, OpenAQ, and NASA FIRMS.</p>
                     </div>
                 </div>
             </div>
-        </section>
 
-       <!-- 프로젝트 소개 -->
-        <section id="projects" class="py-16 md:py-24">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Projects</h2>
-                <div class="grid md:grid-cols-2 gap-10">
-
-                   <!-- 프로젝트 1: Fastmate -->
-                  <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                      <img src="https://res.cloudinary.com/dnswboo5z/image/upload/f_auto,q_auto,w_600/v1755442061/fastmate_gbsqfr.png" alt="Fastmate 앱" class="w-full h-48 object-cover">
-                      <div class="p-6">
-                          <h3 class="text-2xl font-bold mb-2">Fastmate</h3>
-                          <p class="text-gray-600 mb-4">당뇨 가족력으로 간헐적 단식을 실천하는 가족을 위해 만든 건강 관리 앱입니다. 단순 시간 기록을 넘어 케토시스 상태 파악을 위한 케톤 수치 관리까지 담았습니다.</p>
-                          <ul class="text-sm text-gray-600 space-y-1.5 mb-4">
-                              <li class="flex gap-2"><span class="text-xs border border-green-500 text-green-600 px-2 py-0.5 rounded-full shrink-0">구현</span><span>단식 기록별 상세 — 각 기록을 누르면 그 구간의 체중·혈당·케톤·운동·이벤트 로그만 별도 조회</span></li>
-                              <li class="flex gap-2"><span class="text-xs border border-green-500 text-green-600 px-2 py-0.5 rounded-full shrink-0">구현</span><span>오토파지 모드 — '케토식 3일 → 단식' 전환. 케토식 구간 카운트다운과 저탄수 가이드 제공</span></li>
-                              <li class="flex gap-2"><span class="text-xs border border-green-500 text-green-600 px-2 py-0.5 rounded-full shrink-0">구현</span><span>단식 알림 — 시작·목표 달성·종료 및 24·36·48h 장기 단식 마일스톤</span></li>
-                              <li class="flex gap-2"><span class="text-xs border border-amber-500 text-amber-600 px-2 py-0.5 rounded-full shrink-0">연동 예정</span><span>Google Health 연동 — 설정 UI 구현 완료, Google API 검수 완료 후 활성화 예정</span></li>
-                          </ul>
-                          <a href="https://fastmate.kr" target="_blank" rel="noopener" class="text-blue-600 font-semibold hover:underline">앱 방문하기 &rarr;</a>
-                      </div>
-                  </div>
-
-                    <!-- 프로젝트 2: 후다닥 미세먼지 피하기 (ver.5.1) -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="https://res.cloudinary.com/dnswboo5z/image/upload/f_auto,q_auto,w_600/v1755053655/hudadak-air-thumbnail_h5ohtq.png" alt="후다닥 미세먼지 피하기" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <div class="flex items-center gap-2 mb-2">
-                                <h3 class="text-2xl font-bold">후다닥 미세먼지 피하기</h3>
-                                <span class="text-xs font-semibold bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">ver.5.1</span>
-                            </div>
-                            <div class="space-y-3 text-gray-600 mb-4 leading-relaxed">
-                                <p>후다닥 미세먼지 피하기는 9살 기획자 민후가 기존 대기질 앱의 복잡한 정보와 부정확한 위치 표시를 불편해하며 직접 기획한 가족용 대기질 앱입니다. 아이디어, 화면 구성, 필요한 정보와 API 탐색 과정은 Notion에 기록했고, 엄마가 이를 웹 앱, Android 앱과 홈 화면 위젯으로 구현했습니다.</p>
-                                <p>현재 운영 주체는 영리법인인 (주)소울스펙트럼이지만, 이 앱은 수익을 목적으로 하지 않는 무료 가족 프로젝트입니다. 현재 Google Play 비공개 테스트 단계이며 가족 7명이 사용하고 있습니다. 광고, 구독, 유료 결제, 후원 및 데이터 판매는 없습니다.</p>
-                                <p>현재 관측값을 우선 표시하고 예측값은 ‘예측’으로 명확히 구분합니다. WAQI 인제스터는 3시간마다 실행되어 하루 총 8회 데이터를 수집합니다. 앱과 위젯의 안정적인 표시 및 반복적인 외부 API 호출 감소를 위해 최신 관측값을 서버 DB에 임시 저장합니다.</p>
-                            </div>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="text-xs border border-green-500 text-green-600 px-2 py-0.5 rounded-full">웹 안정</span>
-                                <span class="text-xs border border-amber-500 text-amber-600 px-2 py-0.5 rounded-full">Android 비공개 테스트 중</span>
-                            </div>
-                            <div class="flex flex-wrap gap-4">
-                                <a href="https://app-hudadak.netlify.app" target="_blank" rel="noopener noreferrer" class="text-blue-600 font-semibold hover:underline">앱 열기 &rarr;</a>
-                                <a href="https://www.notion.so/maenglionworld/HUDADAK-1-286bcdc037cd80fe931cf808c5159b34?source=copy_link" target="_blank" rel="noopener noreferrer" class="text-blue-600 font-semibold hover:underline">기획 기록 보기 &rarr;</a>
-                                <button id="hudadak-english-toggle" type="button" class="text-gray-500 font-semibold hover:underline" aria-expanded="false" aria-controls="hudadak-english">
-                                    About Hudadak Air (ENG) &darr;
-                                </button>
-                            </div>
-                            <div id="hudadak-english" lang="en" class="hidden mt-6 rounded-lg bg-blue-50 p-5 text-sm text-gray-700 leading-relaxed space-y-3">
-                                <h4 class="font-bold text-blue-900">About Hudadak Air</h4>
-                                <p>Hudadak Air was conceived by Minhoo, a nine-year-old planner who found existing air-quality apps too complex and their location labels unreliable. The planning process, including the information architecture, screen flow, and API research, is documented in Notion. His mother implemented the idea as a web app, an Android app, and a home-screen widget.</p>
-                                <p>Although the app is operated by Soul Spectrum Co., Ltd., a for-profit company, Hudadak Air is currently a free and non-commercial family project. It is distributed through closed Google Play testing and currently has approximately seven family users. The app has no purchase price, subscriptions, advertising, sponsorship, or data sales.</p>
-                                <p>Current observations are prioritized, while forecast values are clearly identified as predictions. The WAQI ingestion job runs every three hours, for a total of eight scheduled runs per day. The latest observation is temporarily stored in our server database to support reliable app and widget display and to reduce repeated external API requests. WAQI and the original data providers are credited in the app.</p>
-                            </div>
-                        </div>
+            <!-- Shrimp Predictor -->
+            <div>
+                <div class="flex items-center gap-3 mb-4">
+                    <h3 class="text-xl font-semibold">Shrimp Predictor</h3>
+                    <span class="text-xs font-medium text-stone-500 border border-stone-300 rounded-full px-2.5 py-0.5">In development</span>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6 items-start">
+                    <div class="rounded-xl overflow-hidden border border-stone-200 bg-white">
+                        <img src="https://res.cloudinary.com/dnswboo5z/image/upload/f_auto,q_auto,w_800/v1755055867/shrimp_predictor_pjmduy.png" alt="Shrimp Predictor" class="w-full h-auto object-cover">
                     </div>
-                    <!-- 프로젝트 3: Shrimp Predictor -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <!-- 썸네일 이미지 (권장 사이즈: 600x400) -->
-                        <img src="https://res.cloudinary.com/dnswboo5z/image/upload/f_auto,q_auto,w_600/v1755055867/shrimp_predictor_pjmduy.png" alt="Shrimp Predictor" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-2">Shrimp Predictor</h3>
-                            <p class="text-gray-600 mb-4">새우를 사랑하는 민후가 직접 기획한 관상용 새우 색상 유전 예상 프로그램. 부모 새우의 정보를 입력하면 2세의 색상을 예측해줍니다.</p>
-                            <a href="https://shrimp-maengsoul.netlify.app/" target="_blank" rel="noopener" class="text-blue-600 font-semibold hover:underline">앱 방문하기 &rarr;</a>
-                        </div>
-                    </div>
-                    <!-- 프로젝트 4: 플래닛 코스터 놀이기구 -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
-                        <!-- 플레이스홀더 이미지 영역 -->
-                        <div class="w-full h-48 bg-[#007BA7] flex items-center justify-center">
-                            <span class="text-4xl" role="img" aria-label="롤러코스터">🎢</span>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-1">플래닛 코스터 놀이기구</h3>
-                            <p class="text-sm text-gray-400 mb-2">by 민후</p>
-                            <p class="text-gray-600 mb-4">게임 '플래닛 코스터'로 민후가 직접 설계하고 만든 놀이기구 작품들을 소개합니다.</p>
-                            <a href="planet-coaster.html" class="text-blue-600 font-semibold hover:underline">보러 가기 &rarr;</a>
-                        </div>
+                    <div class="space-y-4 text-stone-700 leading-relaxed">
+                        <p>A small toy service for exploring the color-genetics of ornamental freshwater shrimp. Matching is allowed only within the same species&mdash;Neocaridina (cherry-type) with Neocaridina, Bee shrimp with Bee shrimp, Amano with Amano&mdash;and the app flags cross-species pairings as non-viable.</p>
+                        <p>Sparked by unusual color variations appearing in a home aquarium. Still under active development and not yet open to the public.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 후다닥 미세먼지 피하기 상세 -->
-        <section id="hudadak" class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">민후의 첫 번째 프로젝트: 후다닥 미세먼지</h2>
-                <p class="text-xl text-center text-gray-600 mb-12">개발 스토리 하이라이트</p>
-
-                <!-- 뉴스 카드형 UI -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- 카드 1: 대표 이미지 -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
-                        <img src="https://res.cloudinary.com/dnswboo5z/image/upload/f_auto,q_auto,w_400/v1755150388/baby_developer_jqtbwa.png" alt="후다닥 미세먼지 대표 이미지" class="w-full h-48 object-cover">
-                        <div class="p-4 flex-grow">
-                            <h4 class="font-bold text-lg mb-2">민후의 첫 작품</h4>
-                            <p class="text-sm text-gray-600">불편함과 문제를 해결하려고 하는 아이의 적극적 의지로 후다닥 미세먼지 피하기가 탄생하였습니다.</p>
-                        </div>
-                    </div>
-                    <!-- 카드 2: 아이디어의 시작 -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
-                        <img src="https://res.cloudinary.com/dnswboo5z/image/upload/f_auto,q_auto,w_400/v1755053961/idea-minhoo_od0jxw.png" alt="민후의 아이디어 스케치" class="w-full h-48 object-cover">
-                        <div class="p-4 flex-grow">
-                            <h4 class="font-bold text-lg mb-2">"내가 보기 편한 앱 만들래!"</h4>
-                            <p class="text-sm text-gray-600">기존 앱들의 복잡한 정보와 부정확한 위치 데이터에 불편함을 느낀 민후가 직접 앱 개발을 결심했습니다.</p>
-                        </div>
-                    </div>
-                    <!-- 카드 3: 민후의 재능 -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
-                        <img src="https://res.cloudinary.com/dnswboo5z/image/upload/f_auto,q_auto,w_400/v1755054245/MINHOO_UNIVERS_r7zzjt.png" alt="GPS 지도" class="w-full h-48 object-cover">
-                        <div class="p-4 flex-grow">
-                            <h4 class="font-bold text-lg mb-2">꼬마 GPS 전문가</h4>
-                            <p class="text-sm text-gray-600">민후는 직접 공공데이터 API를 찾아내고, 사용자에게 꼭 필요한 정보만 보여주는 UI를 구상했습니다.</p>
-                        </div>
-                    </div>
-                    <!-- 카드 4: 유튜브 영상 -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
-                        <div class="youtube-container">
-                            <iframe src="https://www.youtube.com/embed/G8yIXZVppMo" title="공공데이터 포털?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div>
-                        <div class="p-4 flex-grow">
-                             <h4 class="font-bold text-lg mb-2">API를 찾아서</h4>
-                            <p class="text-sm text-gray-600">민후가 직접 공공데이터포털을 탐색하며 앱에 필요한 API를 찾아내는 실제 영상입니다.</p>
-                        </div>
+        <!-- Team -->
+        <section id="team" class="py-16 border-t border-stone-200">
+            <h2 class="text-2xl font-semibold tracking-tight mb-8">Team</h2>
+            <div class="md:flex gap-8 items-start">
+                <div class="md:w-1/3 mb-6 md:mb-0">
+                    <img src="https://res.cloudinary.com/dnswboo5z/image/upload/f_auto,q_auto,w_400/v1755055551/minhoo-profile_kzsumc.png" alt="Minhu" class="rounded-xl border border-stone-200 w-full">
+                </div>
+                <div class="md:w-2/3">
+                    <h3 class="text-xl font-semibold mb-4">Minhu</h3>
+                    <div class="space-y-4 text-stone-700 leading-relaxed">
+                        <p>Minhu did not speak until the age of three. From a very early age, however, he showed an unusual facility with machines and digital interfaces. He installed every available version of domestic navigation apps and could detect even minor UI changes between them.</p>
+                        <p>He developed a sustained interest in fine-dust data and checked air-quality numbers daily across multiple apps. When he drew, the images often came from scenes he had seen in navigation systems.</p>
+                        <p>Around age four he began speaking more. One of his early questions was &ldquo;Is there another Earth?&rdquo; That question led him to Universe Sandbox 2, a project he has continued to explore in depth ever since.</p>
+                        <p>Throughout this period he repeatedly expressed the wish to build services and programs the way his mother did.</p>
+                        <p>His mother, who had worked as a B2C service planner with a background in data, recognized patterns in how he engaged with systems and information. At the time she did not fully understand why her approach aligned so closely with his. Later, while seeking support for Minhu, both received the same AuDHD diagnosis.</p>
+                        <p>That shared lived experience clarified that a product-oriented, interest-driven way of working might be more useful for him than conventional educational paths.</p>
+                        <p>2e Studio was formed around this recognition. Mother and child work on real projects together&mdash;sometimes with more adult scaffolding, sometimes with less&mdash;gradually increasing completeness as Minhu grows.</p>
+                        <p>This is not a story of maternal devotion. It is a practical process of mutual understanding that happens when people who share a similar cognitive style build things side by side.</p>
                     </div>
                 </div>
             </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="py-16 border-t border-stone-200">
+            <h2 class="text-2xl font-semibold tracking-tight mb-6">Contact</h2>
+            <p class="text-stone-700 mb-3">For questions about 2e Studio or potential collaboration:</p>
+            <p class="text-stone-700"><strong class="font-semibold">Soul Spectrum Inc.</strong><br>
+            <a href="mailto:nanyoung@soulspectrum.kr" class="underline hover:text-stone-900">nanyoung@soulspectrum.kr</a></p>
         </section>
 
     </main>
 
-    <!-- 푸터 -->
-    <footer class="bg-gray-800 text-white">
-        <div class="container mx-auto px-6 py-10">
-            <div class="max-w-4xl mx-auto text-center">
-                <h3 class="text-xl font-bold mb-4">2e-studio</h3>
-                <div class="space-y-1 text-sm text-gray-400 leading-relaxed">
-                    <p>(주)소울스펙트럼 · 대표 맹난영 · 651-81-03691</p>
-                    <p>인천광역시 연수구 테크노파크로111번길 5, 8층 801-에스7호</p>
-                    <p>업종: 정보통신업 · 소프트웨어개발</p>
-                    <p>개인정보처리자: 맹난영&nbsp;&nbsp;<a href="mailto:nanyoung@soulspectrum.kr" class="hover:underline">nanyoung@soulspectrum.kr</a></p>
-                    <p><a href="http://pf.kakao.com/_GCYfX/chat" target="_blank" rel="noopener noreferrer" class="hover:underline">카카오톡 채널: @soulspectrum</a></p>
-                </div>
-                <div class="mt-6 pt-6 border-t border-gray-700 flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 text-sm text-gray-400">
-                    <a href="https://soulspectrum.kr" target="_blank" rel="noopener noreferrer" class="hover:underline">soulspectrum.kr</a>
-                    <span class="hidden sm:inline">·</span>
-                    <a href="privacy.html" class="hover:underline">개인정보처리방침</a>
-                    <span class="hidden sm:inline">·</span>
-                    <span>© Soul Spectrum Inc. All rights reserved.</span>
-                </div>
-            </div>
+    <!-- Footer -->
+    <footer class="border-t border-stone-200">
+        <div class="max-w-3xl mx-auto px-6 py-10 text-sm text-stone-500 space-y-1.5">
+            <p class="font-medium text-stone-700">Soul Spectrum Inc.</p>
+            <p>This is an educational project, not a commercial business.</p>
+            <p class="pt-2">&copy; Soul Spectrum Inc.</p>
         </div>
     </footer>
 
     <script>
-        // 모바일 메뉴 토글
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // 후다닥 영문 설명 토글
-        const hudadakEnglishToggle = document.getElementById('hudadak-english-toggle');
-        const hudadakEnglish = document.getElementById('hudadak-english');
-        hudadakEnglishToggle.addEventListener('click', () => {
-            const isOpen = hudadakEnglishToggle.getAttribute('aria-expanded') === 'true';
-            hudadakEnglish.classList.toggle('hidden', isOpen);
-            hudadakEnglishToggle.setAttribute('aria-expanded', String(!isOpen));
-            hudadakEnglishToggle.innerHTML = isOpen
-                ? 'About Hudadak Air (ENG) &darr;'
-                : 'Close English description &uarr;';
-        });
-
-        // 이미지 슬라이더
-        const slider = document.getElementById('slider');
-        const slides = slider.getElementsByClassName('slide');
-        let currentSlide = 0;
-
-        function showSlide(index) {
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].classList.remove('active');
-                slides[i].style.opacity = '0';
-            }
-            slides[index].classList.add('active');
-            slides[index].style.opacity = '1';
-        }
-
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-        }
-
-        // 3초마다 슬라이드 변경
-        setInterval(nextSlide, 3000);
-
-        // 초기 슬라이드 표시
-        showSlide(currentSlide);
+        menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
     </script>
 </body>
 </html>
